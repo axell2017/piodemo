@@ -1,19 +1,14 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Button, Alert } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Button } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
-import { CreditCardInput, LiteCreditCardInput } from "react-native-credit-card-input";
 
 
 export default class ClaimScreen extends React.Component {
   static navigationOptions = {
-    header: null,
+    header: null
   };
-//This constructor doesnt appear to do anything for the CreditCardInput
-  constructor(props) {
-    super(props);
-  _onChange => form => console.log(form);
-  }
 
+  
   render() {
     //this const gives navigation functionality to the button
     const {navigate} = this.props.navigation;
@@ -22,7 +17,6 @@ export default class ClaimScreen extends React.Component {
         {/* Go ahead and delete ExpoLinksView and replace it with your
            * content, we just wanted to provide you with some helpful links */}
         <ExpoLinksView />
-        <CreditCardInput onChange={this._onChange} />
         <Button
             onPress={() => {
               Alert.alert('You tapped the button!');
@@ -30,6 +24,7 @@ export default class ClaimScreen extends React.Component {
             title="Learn More"
             color="#841584"
             accessibilityLabel="Learn more about this purple button"/>
+
         <Button
             onPress={() => navigate('Home')}
             title="Back to homepage"
@@ -47,3 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
+
+
+
+

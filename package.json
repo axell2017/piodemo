@@ -13,15 +13,10 @@
   "dependencies": {
     "@expo/samples": "2.1.1",
     "expo": "^32.0.0",
-    "expo-stripe-checkout": "^1.0.1",
-    "expokit": "^32.0.7",
-    "express": "^4.16.4",
-    "getenv": "^0.7.0",
+    "firebase": "^5.8.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-native-credit-card-input": "^0.4.1",
-    "react-navigation": "^3.0.9",
-    "react-stripe-elements": "^2.0.3"
+    "react-navigation": "^3.0.9"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
