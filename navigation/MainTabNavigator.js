@@ -6,7 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import ClaimScreen from '../screens/ClaimScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import LoginScreen from '../screens/LoginScreen';
+import ContributeScreen from '../screens/ContributeScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -54,12 +54,12 @@ SettingsStack.navigationOptions = {
   ),
 };
 
-const LoginStack = createStackNavigator({
-  Login: LoginScreen,
+const ContributeStack = createStackNavigator({
+  Contribute: ContributeScreen,
 });
 
-LoginStack.navigationOptions = {
-  tabBarLabel: 'Login',
+ContributeStack.navigationOptions = {
+  tabBarLabel: 'Contribute',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -72,5 +72,5 @@ export default createBottomTabNavigator({
   HomeStack,
   ClaimStack,
   SettingsStack,
-  LoginStack,
+  ContributeStack,
 });

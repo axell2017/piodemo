@@ -7,10 +7,13 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
+
+import firebase from 'firebase';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -55,7 +58,11 @@ export default class HomeScreen extends React.Component {
 
         <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
+        <Button
+            onPress={() => firebase.auth().signOut()}
+            title="Sign Out"
+            color="#841584"
+            />
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
           </View>

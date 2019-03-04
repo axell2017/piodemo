@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "PioDemo",
-    "slug": "for4aoo",
+    "slug": "expiodemo",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,10 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "android": {
+      "package": "com.PIOcorp.PassItOn"
+    },
+    "description": "form has been submitted"
   }
 }

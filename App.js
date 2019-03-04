@@ -4,6 +4,8 @@ import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
 import firebase from "firebase";
 import { firebaseConfig } from './config';
+import  {createSwitchNavigator, createAppContainer} from 'react-navigation'
+
 firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
