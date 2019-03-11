@@ -1,44 +1,40 @@
 import React from 'react';
-import { Alert, ScrollView, StyleSheet, Button } from 'react-native';
+import { Alert, ScrollView, StyleSheet, Button, Text, View } from 'react-native';
 import { ExpoLinksView } from '@expo/samples';
+import { Constants, WebBrowser } from 'expo';
 
 
 export default class ClaimScreen extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
 
+    state = {
+      result: null,
+    };
   
-  render() {
-    //this const gives navigation functionality to the button
-    const {navigate} = this.props.navigation;
-    return (
-      <ScrollView style={styles.container}>
-        {/* Go ahead and delete ExpoLinksView and replace it with your
-           * content, we just wanted to provide you with some helpful links */}
-        <ExpoLinksView />
-        <Button
-            onPress={() => {
-              Alert.alert('You tapped the button!');
-            }}
-            title="Learn More"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"/>
-
-        <Button
-            onPress={() => navigate('Home')}
-            title="Back to homepage"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"/>
-      </ScrollView>
-    );
+    render() {
+      return (
+        <View style={styles.container}>
+          <Button
+            style={styles.paragraph}
+            title="Open WebBrowser"
+            onPress={this._handlePressButtonAsync}
+          />
+          <Text>{this.state.result && JSON.stringify(this.state.result)}</Text>
+        </View>
+      );
+    }
+  
+    _handlePressButtonAsync = async () => {
+      let result = await WebBrowser.openBrowserAsync('https://passiton-efaa5.appspot.com/');
+      this.setState({ result });
+    };
   }
-}
-
+  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
     backgroundColor: '#fff',
   },
 });

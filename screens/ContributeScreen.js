@@ -11,7 +11,7 @@ export default class ContributeScreen extends React.Component {
   render() {
     return (
       <WebView
-      source={{uri: 'https://passiton-efaa5.firebaseapp.com/'}}
+      source={{uri: 'https://passiton-efaa5.appspot.com/'}}
       // 'https://passiton-efaa5.firebaseapp.com/'
       style={{marginTop: 20}}
     />

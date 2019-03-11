@@ -28,6 +28,6 @@
     "android": {
       "package": "com.PIOcorp.PassItOn"
     },
-    "description": "form has been submitted"
+    "description": "Database and Auth implemented"
   }
 }
